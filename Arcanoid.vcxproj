@@ -134,18 +134,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ball.cpp" />
-    <ClCompile Include="block.cpp" />
-    <ClCompile Include="block_intersection.cpp" />
-    <ClCompile Include="game.cpp" />
-    <ClCompile Include="levels_manager.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="message_box.cpp" />
-    <ClCompile Include="paddle_intersection.cpp" />
-    <ClCompile Include="puddle.cpp" />
-    <ClCompile Include="resources_manager.cpp" />
-    <ClCompile Include="score_board.cpp" />
-    <ClCompile Include="wall_intersection.cpp" />
+    <ClCompile Include="src\ball.cpp" />
+    <ClCompile Include="src\block.cpp" />
+    <ClCompile Include="src\block_intersection.cpp" />
+    <ClCompile Include="src\game.cpp" />
+    <ClCompile Include="src\levels_manager.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\message_box.cpp" />
+    <ClCompile Include="src\paddle_intersection.cpp" />
+    <ClCompile Include="src\puddle.cpp" />
+    <ClCompile Include="src\resources_manager.cpp" />
+    <ClCompile Include="src\score_board.cpp" />
+    <ClCompile Include="src\wall_intersection.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ball.h" />

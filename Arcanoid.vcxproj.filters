@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Исходные файлы">
@@ -15,40 +15,40 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="game.cpp">
+    <ClCompile Include="src\game.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="resources_manager.cpp">
+    <ClCompile Include="src\resources_manager.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="puddle.cpp">
+    <ClCompile Include="src\puddle.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="ball.cpp">
+    <ClCompile Include="src\ball.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="paddle_intersection.cpp">
+    <ClCompile Include="src\paddle_intersection.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="wall_intersection.cpp">
+    <ClCompile Include="src\wall_intersection.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="block.cpp">
+    <ClCompile Include="src\block.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="block_intersection.cpp">
+    <ClCompile Include="src\block_intersection.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="levels_manager.cpp">
+    <ClCompile Include="src\levels_manager.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="score_board.cpp">
+    <ClCompile Include="src\score_board.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="message_box.cpp">
+    <ClCompile Include="src\message_box.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
