@@ -1,0 +1,21 @@
+/.vs/
+/x64/
+/Debug/
+/Release/
+/*.user
+*.log
+*.tlog
+*.obj
+*.pch
+*.pdb
+*.sdf
+*.ipch
+*.opendb
+*.VC.db
+
+# CMake / Ninja (на всякий случай)
+/build/
+
+# Временные файлы
+*.tmp
+*.cache
