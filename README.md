@@ -1,51 +1,115 @@
-# Arcanoid (SFML)
+# Arkanoid Game
 
-Простой клон арканоида на C++ и SFML.
+A classic clone of the arcade game Arkanoid, written in C++ using the SFML 3.0 library. Control the paddle, bounce the ball, and destroy colorful blocks to complete all levels!
 
-## Зависимости
+## Features
+- Multiple levels with unique block configurations
+- Score tracking and high score saving
+- Different block types with distinct colors
+- Smooth ball and paddle animations
+- Game messages: GAME OVER, NEW LEVEL, VICTORY
+- Level configuration via text file
+- Sound effects for game events
+- Attractive graphics and backgrounds
 
-- **C++ компилятор** (Visual Studio / MSVC или любой совместимый)
-- **SFML 3 (nightly / master)** или совместимая сборка, т.к. проект использует:
-  - `sf::FloatRect::findIntersection`
-  - `getGlobalBounds().size` у `sf::Text`
+## Controls
+- **Left**: ← (left arrow) or `A`
+- **Right**: → (right arrow) or `D`
+- **Start/Restart**: Space
+- **Quit game**: Escape
 
-## Структура проекта
+## Project Structure
+```plaintext
+src/
+├── main.cpp 
+├── ball.cpp              # Ball logic
+├── block.cpp             # Block logic
+├── block_intersection.cpp # Block collision handling
+├── game.cpp              # Main game logic
+├── levels_manager.cpp    # Level management
+├── main.cpp              # Entry point
+├── message_box.cpp       # Message system
+├── paddle_intersection.cpp # Paddle collision handling
+├── puddle.cpp            # Paddle logic
+├── resources_manager.cpp # Resource management
+├── score_board.cpp       # Score system
+└── wall_intersection.cpp # Wall collision handling
 
-- `Arcanoid.vcxproj` – проект Visual Studio
-- `*.cpp`, `include/*.h` – исходники игры
-- `resources/` – игровые данные (уровни, текстуры, звуки, шрифты)
+include/
+├── ball.h
+├── block.h
+├── block_intersection.h
+├── game.h
+├── levels_manager.h
+├── message_box.h
+├── paddle_intersection.h
+├── puddle.h
+├── resources_manager.h
+├── score_board.h
+└── wall_intersection.h
 
-Убедитесь, что в папке `resources` лежат:
+resources/
+├── fonts/                # Fonts for text
+│   ├── karmatic_arcade.tif
+├── sounds/               # Sound effects
+│   ├── game-lost.wav     # Game over sound
+│   ├── game-won.wav      # Win game sound
+│   ├── next_level.wav    # Level complete sound
+│   └── victory.wav       # Victory sound
+├── textures/             # Graphic assets
+│   ├── background.png    # Background image
+│   ├── objects.png       # Game object sprites
+│   └── splashscreen.png  # Splash screen
+└── levels.txt            # Level configuration
+```
 
-- `resources/fonts/karmatic_arcade.ttf`
-- `resources/textures/background.png`
-- `resources/textures/objects.png`
-- `resources/textures/splashscreen.png`
-- `resources/sounds/game-lost.wav`
-- `resources/sounds/game-won.wav`
-- `resources/sounds/next_level.wav`
-- `resources/levels.txt`
+## Level Configuration
+Levels are configured via the `resources/levels.txt` file (format: 10 columns × 16 rows):
 
-Все эти файлы нужно добавить в репозиторий.
+| Symbol | Color       |
+|--------|------------|
+| `.`    | Empty      |
+| `R`    | Red        |
+| `O`    | Orange     |
+| `Y`    | Yellow     |
+| `G`    | Green      |
+| `C`    | Cyan       |
+| `B`    | Blue       |
+| `p`    | Purple     |
 
-## Сборка и запуск (Windows / Visual Studio)
+Example configuration:
+```txt
+# LVL 1:
+..........
+RRRRRRRRRR
+OOOOOOOOOO
+YYYYYYYYYY
+GGGGGGGGGG
+CCCCCCCCCC
+BBBBBBBBBB
+pppppppppp
+..........
+..........
+..........
+..........
+..........
+..........
+..........
+..........
+```
 
-1. Установите SFML 3 (или подходящую dev-сборку) и пропишите пути к:
-   - `SFML/include` в **VC++ Directories → Include Directories**
-   - `SFML/lib` в **VC++ Directories → Library Directories**
-2. Откройте `Arcanoid.vcxproj` в Visual Studio.
-3. Соберите конфигурацию `Debug x64` или `Release x64`.
-4. Убедитесь, что `*.dll` от SFML лежат в одной папке с `Arcanoid.exe` или в системном PATH.
-5. Запустите игру из Visual Studio или напрямую `Arcanoid.exe`.
-
-## Что коммитить
-
-Рекомендуется **НЕ** коммитить файлы сборки (`x64/`, `Debug/`, `Release/`, `.vs/` и т.п.).  
-В репозитории должны быть:
-
-- исходники (`.cpp`, `.h`)
-- файлы проекта (`.vcxproj`, `.filters`)
-- папка `resources/` со всеми ассетами
-- `.gitignore`
-- `README.md`
-
+### Running the Game (Recommended)
+The easiest way to play the game is to download a prebuilt Windows version.
+1. Go to the **Releases** section of this GitHub repository.
+2. Download the latest release archive, for example: `Arcanoid-win64.zip`.
+3. Extract the contents of the archive to any folder.
+4. Run `Arcanoid.exe`.
+All required SFML DLLs and game resources are already included in the archive, so no additional installation is needed.
+#### System Requirements
+- Windows 10/11 64-bit
+- A GPU/driver capable of running SFML-based OpenGL applications
+---
+### Author
+DmitriuAndreevich
+### License
+MIT License
