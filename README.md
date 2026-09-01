@@ -2,6 +2,15 @@
 
 A classic clone of the arcade game Arkanoid, written in C++ using the SFML 3.0 library. Control the paddle, bounce the ball, and destroy colorful blocks to complete all levels!
 
+## Interface
+
+<p align="center">
+  <img src="interface/screensaver.png" width="30%" height="773">
+  <img src="interface/new_level.png" width="30%" height="773">
+  <img src="interface/game_over.png" width="30%" height="773">
+</p>
+
+
 ## Features
 - Multiple levels with unique block configurations
 - Score tracking and high score saving
